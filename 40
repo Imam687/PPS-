@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+union details
+{
+char name[120];
+char home_add[130];
+char hostel_add[130];
+char city[30];
+char
+state[20];
+long int pincode;
+} a;
+int main()
+{
+char sname[100], home[250], hostel[200];
+char city[50], state[50];
+long int pincode;
+printf("\nEnter student name : ");
+gets(sname);
+printf("\nEnter student permanent home address : ");
+gets(home);
+printf("\nEnter student hostel : ");
+gets(hostel);
+printf("\nEnter city where you stay : ");
+gets(city);
+printf("\nEnter state you belong : ");
+gets(state);
+printf("\nEnter pincode where you belong : ");
+scanf("%ld", &pincode);
+printf("\n******* Displaying the STUDENT DETAILS : *********\n");
+strcpy(a.name, sname);
+printf("\n%s", a.name);
+strcpy(a.home_add, home);
+printf("\n%s", a.home_add);
+strcpy(a.hostel_add, hostel);
+printf("\n%s", a.hostel_add);
+strcpy(a.city, city);
+printf("\n%s", a.city);
+strcpy(a.state, state);
+printf("\n%s", a.state);
+a.pincode = pincode;
+printf("\n%ld", a.pincode);
+return 0;
+}

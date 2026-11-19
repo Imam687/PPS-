@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+typedef struct
+{
+long int rollnum;
+char name[30];
+char Branch[20];
+char Address[200];
+} Student;
+int main()
+{
+int i;
+char ch;
+Student students;
+clrscr();
+printf("Enter any one Student Details \n \n");
+//Name
+printf("Name: ");
+scanf("%[^\n]s", students.name);
+//Roll Number
+printf("RollNumber: ");
+scanf("%ld", &students.rollnum);
+//Branch
+printf("Branch: ");
+scanf("%s", students.Branch);
+//Address
+printf("Address: ");
+scanf("%s", students.Address);
+//Displaying Students details
+printf("\n
+printf("Name \t: ");
+Displaying Students Details
+printf("%s \n", students.name);
+printf("roll number \t: ");
+printf("%ld \n", students.rollnum);
+printf("Branch \t: ");
+printf("%s \n", students.Branch);
+printf("Address \t: ");
+printf("%s \n", students.Address);
+getch();
+return 0;
+}
